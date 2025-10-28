@@ -1,0 +1,152 @@
+:root {
+  --bg: #0f1724;
+  --muted: #9aa6bf;
+  --accent: #0ea5a4;
+  --glass: rgba(255, 255, 255, 0.03);
+}
+
+body {
+  font-family: Inter, sans-serif;
+  margin: 0;
+  background: linear-gradient(180deg, #071126 0%, #0f1f2f 100%);
+  color: #e6eef6;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 32px auto;
+  padding: 24px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search {
+  background: var(--glass);
+  padding: 8px;
+  border-radius: 10px;
+}
+
+input,
+select {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--muted);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.card {
+  background: var(--glass);
+  padding: 14px;
+  border-radius: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  box-shadow: 0 4px 18px rgba(2, 6, 23, 0.6);
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0ea5a4, #60a5fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #06202a;
+}
+
+.info {
+  flex: 1;
+}
+
+.name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  color: var(--muted);
+}
+
+.pill {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 6, 23, 0.6);
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-card {
+  background: #0b1220;
+  padding: 18px;
+  border-radius: 12px;
+  color: white;
+  max-width: 400px;
+}

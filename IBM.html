@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IBM-FE Employee Directory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container" id="app">
+    <header>
+      <div>
+        <h1>IBM-FE — Employee Directory</h1>
+        <div class="muted">Search, filter, sort, and view employee details</div>
+      </div>
+
+      <div class="controls">
+        <div class="search">
+          <input type="text" id="query" placeholder="Search by name, role, or email" />
+        </div>
+
+        <select id="deptFilter">
+          <option value="">All Departments</option>
+        </select>
+
+        <select id="sortBy">
+          <option value="name">Sort: Name</option>
+          <option value="role">Sort: Role</option>
+        </select>
+      </div>
+    </header>
+
+    <main>
+      <div class="card-grid" id="grid"></div>
+      <div class="footer">
+        <div class="pill" id="count">0 employees</div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-card">
+      <button id="closeModal">Close</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
